@@ -18,14 +18,13 @@
 
             foreach ($characters as $charakter) {
                 echo "<div class='charakter'>";
-                echo "<h2>" . $charakter['name'] . "</h2>";
+                echo "<a href='' <h2>" . $charakter['name'] . "</h2></a>";
                 echo "<p><strong>Rasse:</strong> " . $charakter['race'] . "</p>";
                 echo "<p><strong>Profession:</strong> " . $charakter['profession'] . "</p>";
                 echo "<p><strong>AT:</strong> " . $charakter['at'] . "</p>";
                 echo "<p><strong>PA:</strong> " . $charakter['pa'] . "</p>";
                 echo "<p><strong>Basis-Lebenspunkte:</strong> " . ($charakter['ko']+ $charakter['ko']+$charakter['kk'])/2 . "</p>";
                 echo "<p><strong>Basis-Ausdauer:</strong> " .($charakter['ko']+ $charakter['ko']+$charakter['kk'])/2 . "</p>";
-                echo "<a> Charakter öffnen </a>";
                 echo "</div>";
             }
             ?>
