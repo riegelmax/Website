@@ -21,11 +21,11 @@
                 echo "<h2>" . $charakter['name'] . "</h2>";
                 echo "<p><strong>Rasse:</strong> " . $charakter['race'] . "</p>";
                 echo "<p><strong>Profession:</strong> " . $charakter['profession'] . "</p>";
-                echo "<p><strong>Leiteigenschaft:</strong> " . $charakter['attribute'] . "</p>";
                 echo "<p><strong>AT:</strong> " . $charakter['at'] . "</p>";
                 echo "<p><strong>PA:</strong> " . $charakter['pa'] . "</p>";
                 echo "<p><strong>Lebenspunkte:</strong> " . $charakter['hp'] . "</p>";
                 echo "<p><strong>Ausdauer:</strong> " . $charakter['stamina'] . "</p>";
+                echo "<a> Charakter öffnen </a>"
                 echo "</div>";
             }
             ?>
