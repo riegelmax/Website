@@ -23,9 +23,9 @@
                 echo "<p><strong>Profession:</strong> " . $charakter['profession'] . "</p>";
                 echo "<p><strong>AT:</strong> " . $charakter['at'] . "</p>";
                 echo "<p><strong>PA:</strong> " . $charakter['pa'] . "</p>";
-                echo "<p><strong>Lebenspunkte:</strong> " . $charakter['hp'] . "</p>";
+                echo "<p><strong>Lebenspunkte:</strong> " . ($charakter['ko']+ $charakter['ko']+$charakter['kk'])/2 . "</p>";
                 echo "<p><strong>Ausdauer:</strong> " . $charakter['stamina'] . "</p>";
-                echo "<a> Charakter öffnen </a>"
+                echo "<a> Charakter öffnen </a>";
                 echo "</div>";
             }
             ?>
