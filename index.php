@@ -26,6 +26,7 @@
                 echo "<p><strong>Basis-Lebenspunkte:</strong> " . ($charakter['ko']+ $charakter['ko']+$charakter['kk'])/2 . "</p>";
                 echo "<p><strong>Basis-Ausdauer:</strong> " .($charakter['ko']+ $charakter['ko']+$charakter['kk'])/2 . "</p>";
                 echo "</div>";
+                
             }
             ?>
         </div>
