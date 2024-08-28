@@ -31,6 +31,10 @@ $character = $db->query("SELECT * FROM characters WHERE id = '$character_id'")->
             <p><strong>Basis-Ausdauer:</strong> <?php echo ($character['ko'] + $character['ko'] + $character['kk']) / 2; ?></p>
             <!-- Add more details here -->
         </div>
+        <div class="talents"> <h2>Talente</h2>
+    
+    
+    </div>
     </main>
 
     <footer>
