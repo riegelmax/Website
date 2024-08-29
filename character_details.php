@@ -25,7 +25,7 @@ $columns = array_keys($character);
 
     <main>
         <div class="charakter-details">
-            <h2><?php echo $character['name']; ?></h2>
+            <h2><?php echo $character['cName']; ?></h2>
             <form action="update_character.php" method="post">
                 <?php foreach ($columns as $column) : ?>
                     <p>
