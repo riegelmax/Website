@@ -1,0 +1,7 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/mriewuen/public_html/DSA
+    - mkdir -p $DEPLOYPATH
+    - cp *.php $DEPLOYPATH
+    - cp .htaccess $DEPLOYPATH
