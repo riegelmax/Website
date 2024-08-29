@@ -1,9 +1,9 @@
 <?php
 include 'connect.php'; // Verbindung zur Datenbank herstellen
 
-$character_id = $_GET['id'];
+$character_ID = $_GET['id'];
 
-$character = $db->query("SELECT * FROM characters WHERE id = '$character_id'")->fetch_assoc();
+$character = $db->query("SELECT * FROM characters WHERE id = '$character_ID'")->fetch_assoc();
 
 // Get the column names from the database table
 $columns = array_keys($character);
@@ -33,7 +33,7 @@ $columns = array_keys($character);
                         <input type="text" name="<?php echo $column; ?>" value="<?php echo $character[$column]; ?>">
                     </p>
                 <?php endforeach; ?>
-                <input type="hidden" name="id" value="<?php echo $character_id; ?>">
+                <input type="hidden" name="id" value="<?php echo $character_ID; ?>">
                 <button type="submit">Speichern</button>
             </form>
         </div>

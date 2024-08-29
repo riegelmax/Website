@@ -18,7 +18,7 @@
 
             foreach ($characters as $charakter) {
                 echo "<div class='charakter'>";
-                echo "<a href='character_details.php?id=" . $charakter['character_id'] . "'>" . $charakter['cName'] . "</a>";
+                echo "<a href='character_details.php?id=" . $charakter['character_ID'] . "'>" . $charakter['cName'] . "</a>";
                 echo "<p><strong>Rasse:</strong> " . $charakter['rasse'] . "</p>";
                 echo "<p><strong>Profession:</strong> " . $charakter['profession'] . "</p>";
              echo "<p><strong>Basis-Lebenspunkte:</strong> " . ($charakter['ko']+ $charakter['ko']+$charakter['kk'])/2 . "</p>";
