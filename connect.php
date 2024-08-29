@@ -1,7 +1,7 @@
 <?php
-$servername = "localhost"; // oder Server-IP
-$username = "dein_db_benutzer";
-$password = "dein_db_passwort";
+$servername = " localhost:3306"; // oder Server-IP
+$username = "mriewuen_admin";
+$password = "Ophelia01!";
 $dbname = "dsa_characters";
 
 // Verbindung zur Datenbank herstellen
