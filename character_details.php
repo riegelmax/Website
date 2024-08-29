@@ -3,7 +3,7 @@ include 'connect.php'; // Verbindung zur Datenbank herstellen
 
 $character_ID = $_GET['id'];
 
-$character = $db->query("SELECT * FROM characters WHERE id = '$character_ID'")->fetch_assoc();
+$character = $db->query("SELECT * FROM charData WHERE character_ID = '$character_ID'")->fetch_assoc();
 
 // Get the column names from the database table
 $columns = array_keys($character);
