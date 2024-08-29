@@ -2,6 +2,7 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/mriewuen/public_html/DSA
+    - rm -rf $DEPLOYPATH/*  # Delete existing files
     - mkdir -p $DEPLOYPATH
     - cp *.php $DEPLOYPATH
     - cp .htaccess $DEPLOYPATH
