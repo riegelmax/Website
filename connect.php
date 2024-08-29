@@ -1,5 +1,5 @@
 <?php
-$servername = " localhost:3306"; // oder Server-IP
+$servername = "localhost:3306"; // oder Server-IP
 $username = "mriewuen_rain992";
 $password = "Ophelia01!";
 $dbname = "dsa_characters";
