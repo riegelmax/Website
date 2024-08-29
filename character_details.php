@@ -1,12 +1,21 @@
 <?php
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+
 include 'connect.php'; // Verbindung zur Datenbank herstellen
 
 $character_ID = $_GET['id'];
 
-$character = $db->query("SELECT * FROM charData WHERE character_ID = '$character_ID'")->fetch_assoc();
+// Use prepared statements to prevent SQL injection
+$stmt = $db->prepare("SELECT * FROM charData WHERE character_ID = ?");
+$stmt->bind_param("i", $character_ID);
+$stmt->execute();
+$character = $stmt->get_result()->fetch_assoc();
 
 // Get the column names from the database table
 $columns = array_keys($character);
+
+// ... rest of the code ...
 
 ?>
 
