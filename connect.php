@@ -13,7 +13,7 @@ if ($conn->connect_error) {
 }
 
 // Daten aus der Tabelle "characters" abrufen
-$sql = "SELECT * FROM characters";
+$sql = "SELECT * FROM charData";
 $result = $conn->query($sql);
 
 $characters = [];

@@ -18,12 +18,10 @@
 
             foreach ($characters as $charakter) {
                 echo "<div class='charakter'>";
-                echo "<a href='character_details.php?id=" . $charakter['id'] . "'>" . $charakter['name'] . "</a>";
-                echo "<p><strong>Rasse:</strong> " . $charakter['race'] . "</p>";
+                echo "<a href='character_details.php?id=" . $charakter['id'] . "'>" . $charakter['cName'] . "</a>";
+                echo "<p><strong>Rasse:</strong> " . $charakter['rasse'] . "</p>";
                 echo "<p><strong>Profession:</strong> " . $charakter['profession'] . "</p>";
-              #  echo "<p><strong>AT:</strong> " . $charakter['at'] . "</p>";
-              #  echo "<p><strong>PA:</strong> " . $charakter['pa'] . "</p>";
-                echo "<p><strong>Basis-Lebenspunkte:</strong> " . ($charakter['ko']+ $charakter['ko']+$charakter['kk'])/2 . "</p>";
+             echo "<p><strong>Basis-Lebenspunkte:</strong> " . ($charakter['ko']+ $charakter['ko']+$charakter['kk'])/2 . "</p>";
                 echo "<p><strong>Basis-Ausdauer:</strong> " .($charakter['ko']+ $charakter['ko']+$charakter['kk'])/2 . "</p>";
                 echo "</div>";
                 
