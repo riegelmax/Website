@@ -5,6 +5,9 @@ $character_id = $_GET['id'];
 
 $character = $db->query("SELECT * FROM characters WHERE id = '$character_id'")->fetch_assoc();
 
+// Get the column names from the database table
+$columns = array_keys($character);
+
 ?>
 
 <!DOCTYPE html>
@@ -23,18 +26,17 @@ $character = $db->query("SELECT * FROM characters WHERE id = '$character_id'")->
     <main>
         <div class="charakter-details">
             <h2><?php echo $character['name']; ?></h2>
-            <p><strong>Rasse:</strong> <?php echo $character['race']; ?></p>
-            <p><strong>Profession:</strong> <?php echo $character['profession']; ?></p>
-            <p><strong>AT:</strong> <?php echo $character['at']; ?></p>
-            <p><strong>PA:</strong> <?php echo $character['pa']; ?></p>
-            <p><strong>Basis-Lebenspunkte:</strong> <?php echo ($character['ko'] + $character['ko'] + $character['kk']) / 2; ?></p>
-            <p><strong>Basis-Ausdauer:</strong> <?php echo ($character['ko'] + $character['ko'] + $character['kk']) / 2; ?></p>
-            <!-- Add more details here -->
+            <form action="update_character.php" method="post">
+                <?php foreach ($columns as $column) : ?>
+                    <p>
+                        <strong><?php echo ucfirst($column); ?>:</strong>
+                        <input type="text" name="<?php echo $column; ?>" value="<?php echo $character[$column]; ?>">
+                    </p>
+                <?php endforeach; ?>
+                <input type="hidden" name="id" value="<?php echo $character_id; ?>">
+                <button type="submit">Speichern</button>
+            </form>
         </div>
-        <div class="talents"> <h2>Talente</h2>
-    
-    
-    </div>
     </main>
 
     <footer>
