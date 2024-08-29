@@ -2,7 +2,7 @@
 $servername = "localhost"; // oder Server-IP
 $username = "mriewuen_admin";
 $password = "Ophelia01!";
-$dbname = "dsa_characters";
+$dbname = "mriewuen_dsa";
 
 // Verbindung zur Datenbank herstellen
 $conn = new mysqli($servername, $username, $password, $dbname);
