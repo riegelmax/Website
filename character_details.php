@@ -3,7 +3,7 @@ ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
 include 'connect.php'; // Verbindung zur Datenbank herstellen
-$db = $dbname;
+$db = new mysqli($servername, $username, $password, $dbname);
 $character_ID = $_GET['id'];
 
 // Use prepared statements to prevent SQL injection
